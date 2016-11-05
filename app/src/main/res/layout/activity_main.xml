@@ -1,18 +1,160 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.evgeny.practice_intensive1.ui.activities.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"/>
-</RelativeLayout>
+    <LinearLayout style="@style/linear_layout_list_main">
+
+        <android.support.v7.widget.AppCompatImageView
+            style="@style/icon.left"
+            android:src="@drawable/ic_call_black_24dp"/>
+
+        <LinearLayout style="@style/linear_layout_list_data">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    style="@style/edit_text"
+                    android:id="@+id/mobile_phone_et"
+                    android:inputType="phone"
+                    android:hint="@string/mobile_phone_et"
+                    android:text="89876543210"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <android.support.v7.widget.AppCompatImageView
+            style="@style/icon.right"
+            android:src="@drawable/ic_phone_in_talk_black_24dp"/>
+
+    </LinearLayout>
+
+    <View style="@style/line"/>
+
+    <LinearLayout style="@style/linear_layout_list_main">
+
+        <android.support.v7.widget.AppCompatImageView
+            style="@style/icon.left"
+            android:src="@drawable/ic_email_black_24dp"/>
+
+        <LinearLayout style="@style/linear_layout_list_data">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    style="@style/edit_text"
+                    android:id="@+id/email_et"
+                    android:inputType="textEmailAddress"
+                    android:hint="@string/my_mail_et"
+                    android:text="admin@word.com"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <android.support.v7.widget.AppCompatImageView
+            style="@style/icon.right"
+            android:src="@drawable/ic_send_black_24dp"/>
+
+    </LinearLayout>
+
+    <View style="@style/line"/>
+
+    <LinearLayout style="@style/linear_layout_list_main">
+
+        <android.support.v7.widget.AppCompatImageView
+            style="@style/icon.left"
+            android:src="@drawable/ic_1478405117_vk"/>
+
+        <LinearLayout style="@style/linear_layout_list_data">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    style="@style/edit_text"
+                    android:id="@+id/vk_et"
+                    android:inputType="text"
+                    android:hint="@string/vk_et"
+                    android:text="vk.com/id"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <android.support.v7.widget.AppCompatImageView
+            style="@style/icon.right"
+            android:src="@drawable/ic_1478404798_eye_24"/>
+
+    </LinearLayout>
+
+    <View style="@style/line"/>
+
+    <LinearLayout style="@style/linear_layout_list_main">
+
+        <android.support.v7.widget.AppCompatImageView
+            style="@style/icon.left"
+            android:src="@drawable/ic_1478404761_github"/>
+
+        <LinearLayout style="@style/linear_layout_list_data">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    style="@style/edit_text"
+                    android:id="@+id/repo_et"
+                    android:inputType="text"
+                    android:hint="@string/repo_et"
+                    android:text="github.com/makeweb/DevRepository"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <android.support.v7.widget.AppCompatImageView
+            style="@style/icon.right"
+            android:src="@drawable/ic_1478404798_eye_24"/>
+
+    </LinearLayout>
+
+    <View style="@style/line"/>
+
+    <LinearLayout style="@style/linear_layout_list_main">
+
+        <android.support.v7.widget.AppCompatImageView
+            style="@style/icon.left"
+            android:src="@drawable/ic_account_circle_black_24dp"/>
+
+        <LinearLayout style="@style/linear_layout_list_data.about">
+
+                <EditText
+                    style="@style/edit_text"
+                    android:id="@+id/about_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:hint="@string/about_tv"
+                    android:text="@string/about_text"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
