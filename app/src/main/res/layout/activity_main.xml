@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<android.support.v4.widget.NestedScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="1">
+
+<LinearLayout
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,6 +16,60 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.evgeny.practice_intensive1.ui.activities.MainActivity">
+
+    <LinearLayout style="@style/linear_layout_list_main.top">
+
+        <LinearLayout style="@style/linear_layout_top"
+            android:layout_weight="0.5">
+
+            <TextView
+                style="@style/text_view_top"
+                android:id="@+id/rate_tv"
+                android:textSize="@dimen/font_18"
+                android:text="8"/>
+
+            <TextView
+                style="@style/text_view_top"
+                android:text="Рейтинг"/>
+
+        </LinearLayout>
+
+        <View style="@style/line_vertical"/>
+
+        <LinearLayout style="@style/linear_layout_top"
+            android:layout_weight="1">
+
+            <TextView
+                style="@style/text_view_top"
+                android:id="@+id/code_lines_tv"
+                android:textSize="@dimen/font_18"
+                android:text="2340"/>
+
+            <TextView
+                style="@style/text_view_top"
+                android:text="Написано строк кода" />
+
+
+        </LinearLayout>
+
+        <View style="@style/line_vertical"/>
+
+        <LinearLayout style="@style/linear_layout_top"
+            android:layout_weight="0.5">
+
+            <TextView
+                style="@style/text_view_top"
+                android:id="@+id/projects_tv"
+                android:textSize="@dimen/font_18"
+                android:text="7"/>
+
+            <TextView
+                style="@style/text_view_top"
+                android:text="Проектов"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
 
     <LinearLayout style="@style/linear_layout_list_main">
 
@@ -122,7 +181,7 @@
                     android:id="@+id/repo_et"
                     android:inputType="text"
                     android:hint="@string/repo_et"
-                    android:text="github.com/makeweb/DevRepository"/>
+                    android:text="github.com/makeweb/DevIntensive"/>
 
             </android.support.design.widget.TextInputLayout>
 
@@ -162,3 +221,5 @@
     </LinearLayout>
 
 </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>
