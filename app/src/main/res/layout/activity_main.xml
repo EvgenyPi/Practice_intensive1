@@ -144,14 +144,18 @@
 
         <LinearLayout style="@style/linear_layout_list_data.about">
 
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
                 <EditText
                     style="@style/edit_text"
                     android:id="@+id/about_tv"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
                     android:inputType="textMultiLine"
                     android:hint="@string/about_tv"
-                    android:text="@string/about_text"/>
+                    android:text="@string/about_text" />
+
+            </android.support.design.widget.TextInputLayout>
 
         </LinearLayout>
 
