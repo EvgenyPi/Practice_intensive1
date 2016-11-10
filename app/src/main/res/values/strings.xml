@@ -1,3 +1,24 @@
 <resources>
     <string name="app_name">Evgeny P</string>
+    <string name="mobile_phone_et">Мобильный телефон</string>
+    <string name="my_mail_et">e-mail</string>
+    <string name="vk_et">Профиль VK</string>
+    <string name="repo_et">Репозиторий</string>
+    <string name="about_tv">О себе</string>
+    <string name="about_text">
+        Навител Навигатор –\n
+        уникальная и точная\n
+        система навигации, включающая бесплатный
+        сервис Навител.Пробки, данные о камерах
+        наблюдения ГИБДД (SPEEDCAM), Голосовые
+        подсказки, оптимальные маршруты, пробки
+        и объезды. Самая подробная карта России,
+        с подробными адресными планами и
+        улично-дорожной сетью. Населенные пункты
+        и транзитные маршруты по всем областям РФ.
+        Огромная база полезных объектов POI (АЗС,
+        ГИБДД, кафе, рестораны, мотели, гостиницы
+        и т.д.).
+    </string>
+    <string name="title_activity_base">BaseActivity</string>
 </resources>

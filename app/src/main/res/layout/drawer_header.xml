@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="172dp"
+                android:paddingTop="@dimen/spacing_medial_24"
+                android:paddingLeft="@dimen/spacing_normal_16"
+                android:paddingRight="@dimen/spacing_normal_16"
+                android:paddingBottom="@dimen/spacing_small_8"
+                android:background="@drawable/drawer_background">
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@color/colorAccent"
+        android:layout_marginTop="@dimen/spacing_normal_16"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/spacing_large_56"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical"
+        >
+
+        <TextView
+            style="@style/drawable_text_view"
+            android:id="@+id/user_name_txt"
+            android:text="Evgeny Pi"
+            android:fontFamily="sans-serif-medium"/>
+
+        <TextView
+            style="@style/drawable_text_view"
+            android:id="@+id/user_email_txt"
+            android:text="email@mail.ru"
+            android:fontFamily="sans-serif"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/user_profile_menu"
+              android:checkable="true"
+              android:icon="@drawable/ic_user_profile_24dp"
+              android:title="Мой профайл">
+        </item>
+        <item android:id="@+id/team_menu"
+              android:icon="@drawable/ic_team_24dp"
+              android:title="Команда">
+        </item>
+
+    </group>
+
+</menu>
