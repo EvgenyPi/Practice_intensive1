@@ -5,18 +5,55 @@
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.evgeny.practice_intensive1.ui.activities.MainActivity"
+    android:id="@+id/navigation_drawer"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
 
 <android.support.design.widget.CoordinatorLayout
     android:id="@+id/main_coordinator_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar_layout"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:contentScrim="@color/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+         <ImageView
+             android:id="@+id/user_photo_img"
+             android:layout_width="match_parent"
+             android:layout_height="@dimen/profile_image_size"
+             android:scaleType="centerCrop"
+             android:src="@drawable/jason"
+             android:fitsSystemWindows="true"/>
+
+        <android.support.v7.widget.Toolbar
+            android:theme="@style/AppTheme.PopupOverlay"
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:titleTextColor="@color/white"
+            app:layout_collapseMode="pin"/>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
 <android.support.v4.widget.NestedScrollView
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    android:layout_weight="1">
+    android:layout_weight="1"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
 <LinearLayout
     android:id="@+id/activity_main"
@@ -191,7 +228,7 @@
 
                 <EditText
                     style="@style/edit_text"
-                    android:id="@+id/repo_et"
+                    android:id="@+id/github_et"
                     android:inputType="text"
                     android:hint="@string/repo_et"
                     android:text="github.com/makeweb/DevIntensive"/>
@@ -222,7 +259,7 @@
 
                 <EditText
                     style="@style/edit_text"
-                    android:id="@+id/about_tv"
+                    android:id="@+id/about_et"
                     android:inputType="textMultiLine"
                     android:hint="@string/about_tv"
                     android:text="@string/about_text" />
@@ -236,6 +273,16 @@
 </LinearLayout>
 
 </android.support.v4.widget.NestedScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_edit_black_24dp"
+        app:layout_anchor="@id/appbar_layout"
+        app:layout_anchorGravity="bottom|right"
+        android:layout_marginRight="@dimen/fab_right_space"
+        app:fabSize="normal"/>
 
 </android.support.design.widget.CoordinatorLayout>
 

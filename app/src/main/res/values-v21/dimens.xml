@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--FAB-->
+    <dimen name="fab_right_space">8dp</dimen>
+
+</resources>

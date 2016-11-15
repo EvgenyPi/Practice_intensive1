@@ -1,7 +1,7 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -19,6 +19,8 @@
     <style name="linear_layout_list_main.top" parent="linear_layout_list_main">
         <item name="android:layout_marginTop">0dp</item>
         <item name="android:layout_marginBottom">0dp</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
         <item name="android:background">@color/grey</item>
     </style>
 
@@ -85,8 +87,7 @@
         <item name="android:layout_width">@dimen/line_size2</item>
         <item name="android:layout_height">fill_parent</item>
         <item name="android:background">@color/grey_light</item>
-        <item name="android:layout_marginTop">@dimen/spacing_small_8</item>
-        <item name="android:layout_marginBottom">@dimen/spacing_small_8</item>
+
     </style>
 
     <style name="text_view_top">

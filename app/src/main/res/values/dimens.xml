@@ -25,4 +25,11 @@
     <dimen name="font_18">18sp</dimen>
     <dimen name="fab_margin">16dp</dimen>
 
+    <!--User photo-->
+    <dimen name="profile_image_size">256dp</dimen>
+
+    <!--FAB-->
+    <dimen name="fab_right_space">8dp</dimen>
+
+
 </resources>

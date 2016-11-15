@@ -21,4 +21,6 @@
         и т.д.).
     </string>
     <string name="title_activity_base">BaseActivity</string>
+    <string name="edit_mode_msg">Режим редактирования</string>
+    <string name="show_mode_msg">Режим просмотра</string>
 </resources>
