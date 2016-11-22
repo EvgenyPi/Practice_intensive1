@@ -1,7 +1,7 @@
 package com.evgeny.practice_intensive1.ui.activities;
 
+import android.net.Uri;
 import android.os.Bundle;
-import android.support.annotation.BoolRes;
 import android.support.annotation.NonNull;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
@@ -15,10 +15,13 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 
 import com.evgeny.practice_intensive1.R;
 import com.evgeny.practice_intensive1.data.managers.DataManager;
 import com.evgeny.practice_intensive1.utils.ConstantManager;
+import com.evgeny.practice_intensive1.utils.RoundImageTransformation;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -69,6 +72,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         setupToolbar();
         setupDrawer();
         loadUserInfoValue();
+        setupMenuAvatar(Uri.parse("android.resource://com.evgeny.practice_intensive1/" + R.drawable.jason));
 
 
         if (savedInstanceState == null) {
@@ -77,6 +81,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             mCurrentEditMode = savedInstanceState.getInt(ConstantManager.EDIT_MODE_KEY, 0);
             changeEditMode(mCurrentEditMode);
         }
+
+
 
     }
 
@@ -150,6 +156,17 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         outState.putInt(ConstantManager.EDIT_MODE_KEY, mCurrentEditMode);
     }
 
+    @Override
+    public void onBackPressed() {
+
+        if (mNavigationDrawer.isDrawerOpen(GravityCompat.START)) {
+            mNavigationDrawer.closeDrawer(GravityCompat.START);
+        } else {
+            super.onBackPressed();
+        }
+
+    }
+
     private void showSnackbar (String message) {
         Snackbar.make(mCoordinatorLayout, message, Snackbar.LENGTH_LONG).show();
     }
@@ -213,4 +230,21 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         }
         mDataManager.getPreferencesManager().saveUserProfileData(userData);
     }
+
+    private void setupMenuAvatar(final Uri image) {
+        NavigationView navigationView = (NavigationView) findViewById(R.id.navigation_view);
+        if (navigationView != null) {
+            final ImageView mRoundedAvatar_img = (ImageView) navigationView.getHeaderView(0).findViewById(R.id.profile_pic);
+            Picasso.with(this)
+                    .load(image)
+                    .resize(getResources().getDimensionPixelSize(R.dimen.profile_image_size), getResources().getDimensionPixelSize(R.dimen.profile_image_size))
+                    .transform(new RoundImageTransformation())
+                    .centerCrop()
+                    .into(mRoundedAvatar_img);
+
+        }
+    }
+
 }
+
+
